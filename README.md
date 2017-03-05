@@ -16,6 +16,7 @@
 ## remind
 因为douban设置了访问头验证，所以需要设置头部信息
 所以在setting.py上面设置了
+
 	DEFAULT_REQUEST_HEADERS = {
 	  'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
 	  'Accept-Language': 'en',
