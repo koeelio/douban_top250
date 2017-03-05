@@ -29,7 +29,7 @@ class Doubantop250Spider(scrapy.Spider):
                         MapCompose(lambda i: i.replace('\xa0', '')), Join(), )
             l.add_xpath('des', 'div[@class="info"]/div[@class="bd"]/p/text()',
                         MapCompose(lambda i: i.replace('\xa0', ' '), str.strip),
-                        Join())
+                        Join(),)
             l.add_xpath('movie_time', 'div[@class="info"]/div[@class="bd"]/p/text()',re='\d{4}',)
             l.add_xpath('rating',
                         'div[@class="info"]/div[@class="bd"]/div[@class="star"]/span[@class="rating_num"]/text()',
