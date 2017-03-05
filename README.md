@@ -30,6 +30,7 @@
 在返回items的时候用到了Scrapy的ItemLoder这个类
 ItemLoder这个类的作用是让爬取的数据格式化，可以自定义格式。
 使用时需要先实例化这个类，
+
 	l = ItemLoader(DoubanItem(), response)
 
 第一个参数是我们定义的item，第二个参数是爬取网页的response
