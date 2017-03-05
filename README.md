@@ -6,8 +6,8 @@
 
 ## 使用Scrapy自带的cmdline类，写了一个main.py
 该文件代码只有两行，只是为了方便测试代码，不需要每次到terminal下输入命令，只要在pycharm上设置的运行设置上配置好文件路径
+
 	from scrapy import cmdline
-	
 	cmdline.execute('scrapy crawl doubantop250'.split())
 
 在pycharm下运行设置需要注意：
