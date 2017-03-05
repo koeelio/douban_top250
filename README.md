@@ -52,7 +52,7 @@ re顾名思义就是正则表达式。
 为了让数据呈现的更加规范,还多添加了5个字段：
 
 
-			main_url = scrapy.Field() #爬虫的网址
+	    main_url = scrapy.Field() #爬虫的网址
 	    project = scrapy.Field() #爬虫的项目名称
 	    spider = scrapy.Field() #爬虫的名称
 	    server = scrapy.Field() #爬虫所运行的server
@@ -64,17 +64,17 @@ re顾名思义就是正则表达式。
 所以在爬虫的解析中返回item时也需要添加这个几个字段的信息
 
 
-				l.add_value('main_url', response.url)
-		    l.add_value('project', self.settings.get('BOT_NAME'))
+		l.add_value('main_url', response.url)
+		l.add_value('project', self.settings.get('BOT_NAME'))
 	        l.add_value('spider', self.name)
-		    l.add_value('server', socket.gethostname())
+		l.add_value('server', socket.gethostname())
 		l.add_value('date',''.join(str(datetime.datetime.now())))
 
 
 
 最后，
 
-	yield l.load_item()
+	        yield l.load_item()
 
 
 
